@@ -7,6 +7,7 @@ su organización y antes de ubicarlos en su librero se verifica su estado e info
 De cada libro se debe tener: nombre/s autor, fecha de publicación, editorial y el número ISSN 
 (código de 8 dígitos que sirven para identificar las publicaciones)
 """
+
 class Nodo():
     def __init__(self, dato=None, prox=None):
         self.dato = dato
@@ -68,8 +69,11 @@ class Lista():
         self.len -= 1
 
 class Pila():
-    def __init__(self) -> None:
-        pass
+    def __init__(self, autor, publicacion, editorial, ISSN):
+        self.autor = autor
+        self.publicacion = publicacion
+        self.editorial = editorial
+        self.ISSN = ISSN
     def apilar(self):
         print("esto es para apilar")
     def desapilar(self):
@@ -77,3 +81,4 @@ class Pila():
     def esVacia(self):
         print("hol")
 
+listaLibros = Lista()
